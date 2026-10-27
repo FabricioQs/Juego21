@@ -2,10 +2,12 @@ package com.krakedev.juegos.entidades;
 
 import java.util.ArrayList;
 
-public class Jugador {
+	public class Jugador {
     private String nickName;
    
     private ArrayList<Carta> cartas = new ArrayList<>();
+    
+    private int puntajeCartas;
 
     public Jugador(String nickName) {
         this.nickName = nickName;
@@ -37,5 +39,13 @@ public class Jugador {
 
     public void setCartas(ArrayList<Carta> cartas) {
         this.cartas = cartas;
+    }
+    
+    public int getPuntajeCartas() {
+        return puntajeCartas;
+    }
+
+    public void setPuntajeCartas(int puntajeCartas) {
+        this.puntajeCartas = puntajeCartas;
     }
 }

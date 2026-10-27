@@ -39,4 +39,24 @@ public class Dealer {
     public void setNaipe(ArrayList<Carta> naipe) {
         this.naipe = naipe;
     }
+    
+
+    public int generarAleatorio(int maximo) {
+        return (int) (Math.random() * (maximo + 1));
+    }
+    
+
+    public Carta entregarCarta() {
+       
+        int posicionAleatoria = generarAleatorio(naipe.size() - 1);
+        
+        
+        Carta cartaElegida = naipe.get(posicionAleatoria);
+        
+        
+        naipe.remove(posicionAleatoria);
+        
+
+        return cartaElegida;
+    }
 }
